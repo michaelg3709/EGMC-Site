@@ -17,7 +17,7 @@ body {
     height: 100%;
 }
 header {
-    background-color: darkgray;
+    background-color: #BDBDBD;
 }
 header:after {
     content: " ";
