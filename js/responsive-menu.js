@@ -4,7 +4,7 @@
  * Version: 0.0.1
  */
 
-(function ($, window, document, Math, undefined) {
+;(function ($, window, document, Math, undefined) {
 
     'use strict';
     var pluginName = 'rMenu';
