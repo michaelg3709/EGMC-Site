@@ -608,7 +608,7 @@
             e.stopPropagation();
 
             if ( ( $el.hasClass( o.itemHoverClass ) || !$el.hasClass( o.parentClass ) ) && !o.touchMoveBool ) {
-                location.href = $el.children( 'a' ).attr('href=#' target="_blank");
+                location.href = $el.children( 'a' ).attr('href');
                 menuBlur( e );
             } else if ( e.type !== 'touchend' ) {
                 e.preventDefault();
