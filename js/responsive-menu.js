@@ -4,7 +4,7 @@
  * Version: 0.0.1
  */
 
-;(function( $, window, document, Math, undefined ) {
+(function ($, window, document, Math, undefined) {
 
     'use strict';
     var pluginName = 'rMenu';
@@ -16,7 +16,7 @@
      * @returns {Plugin}
      * @constructor
      */
-    var Plugin = function( el, options ) {
+    var Plugin = function (el, options) {
 
         // Clone this object
         var o = this;
