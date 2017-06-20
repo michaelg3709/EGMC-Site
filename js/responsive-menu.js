@@ -263,8 +263,19 @@
                 o.tButton.removeClass( o.tButtonClass );
             }
 
+            // Remove o.noJSClass class and add click event to Toggle Link
+            o.tButton
+                .removeClass( o.noJSClass )
+                .off( 'mousedown.rm focusin.rm click.rm' )
 
-            
+                // Use mousedown and focus to trigger toggle
+                .on( 'mousedown.rm focusin.rm', tButtonFocus )
+
+                // Disable click events
+                .on( 'click.rm', tButtonClick )
+
+                .attr( 'tabindex', 0 )
+            ;            
             
 
             // Add menu class and make submenus accessibly hidden
