@@ -21,10 +21,6 @@
         // Clone this object
         var o = this;
 
-        /**
-         * Initialize option defaults and set options =============================
-         * @type {{minWidth: string, toggleSel: string, menuSel: string, menuItemsSel: string, transitionSpeed: number, animateBool: string, accelerateBool: string}}
-         */
         o.optionsInit = {
 
             /**
@@ -210,14 +206,9 @@
         o.windowWidth = $( window ).width();
 
 
-        /**
-         * Initiate plugin =========================================
-         * @returns {Plugin}
-         */
         o.init = function() { // Should only be called once
 
-            // Set up the plugin
-            o.setup();
+             o.setup();
 
             // Window event handlers
             $( window ).on({
@@ -227,8 +218,6 @@
 
                     // Test if width has resized - as opposed to height
                     if ($( window ).width() !== o.windowWidth) {
-
-                        // Update the window width
                         o.windowWidth = $( window ).width();
 
                         // Adjust layout
@@ -247,10 +236,6 @@
             return this;
         };
 
-        /**
-         * Setup plugin ============================================================
-         * @returns {Plugin}
-         */
         o.setup = function() { // Can be called again to reset plugin
 
             // Add the container class to the nav element's parent element
@@ -263,7 +248,6 @@
                 o.tButton.removeClass( o.tButtonClass );
             }
 
-            // Remove o.noJSClass class and add click event to Toggle Link
             o.tButton
                 .removeClass( o.noJSClass )
                 .off( 'mousedown.rm focusin.rm click.rm' )
@@ -316,7 +300,6 @@
                 }
             }
 
-            // Add and remove classes and click events
             o.el
                 .removeClass( o.noJSClass )
                 .addClass( o.navElementClass )
@@ -360,11 +343,6 @@
             return this;
         };
 
-        /**
-         * Adjust plugin ============================================================
-         * @param {String} minWidth  - the min-width value (including units)
-         * minWidth must be in pixels if not using Modernizr. Should match media query in css file
-         */
         o.adjust = function( minWidth ) {
 
             // Get the breakpoint minimum width
@@ -393,12 +371,6 @@
             }
         };
 
-        // External Helper Functions ===============================================
-
-        /**
-         * Contracted layout
-         * @returns {Plugin}
-         */
         o.layoutContracted = function() {
 
             if ( !o.container.hasClass( o.contractedClass ) ) { // not contracted
@@ -510,11 +482,6 @@
             return this;
         };
 
-        /**
-         * Calculate the heights of each submenu and store in data object, reset styles
-         * Used when CSS3 transitions are enabled
-         * @returns {Plugin}
-         */
         o.calculateHeights = function() {
 
             // Unstyle menus to original state to measure heights and then reapply styles
@@ -539,10 +506,6 @@
             return this;
         };
 
-        /**
-         * Toggle visibility of entire menu
-         * @param {Object} el - The toggle Link element
-         */
         o.toggleMenu = function( el ) {
 
             // Contract all sub-menus
@@ -569,12 +532,7 @@
 
         };
 
-        // internal Event Handler Functions ===============================================
 
-        /**
-         * Toggle Btn focus and mousedown event handler
-         * @param {event} e - event object
-         */
         var tButtonFocus = function( e ) {
 
             e.stopPropagation();
@@ -770,8 +728,6 @@
                 scrollMenu( o.itemFocused );
             }
         };
-
-        // Internal Helper Functions ===============================================
 
         /**
          * Contract sub-menus
