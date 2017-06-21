@@ -1,38 +1,19 @@
 
-/*! Responsive menu
-version: 0.2.1
+/*! ATC Assistant
+version: 0.2.9
 */
 
-/*
-Suggested HTML:
-<a class="rm-toggle rm-button rm-nojs" href="#">Menus</a>
-<nav class="rm-nav rm-nojs rm-lighten">
-	<ul> ...
-
-Theme class options: rm-lighten(as illustrated above), rm-darken.
-rm-lighten theme lightens menu item backgrounds.
-rm-darken theme darkens menu item backgrounds.
-Set menu background color to any color
-to work with the chosen theme.
-*/
-
-/* Set menu background color here */
 .rm-nav ul,
 .rm-menu {
-    background-color: rgb(0, 0, 0);
+    background-color: #BDBDBD;
     margin-top: 0;
 }
-
-/* Required styles =========================================================== */
-
-/* Add clearfix to nav element container*/
 .rm-container:after {
     content: " ";
     display: table;
     clear: both;
 }
 
-/* Toggle Link styles */
 .rm-toggle {
     display:  none;
     float: right;
@@ -49,7 +30,6 @@ to work with the chosen theme.
     display: inline-block;
 }
 
-/* Toggle Button styles */
 .rm-toggle.rm-button {
     /* Use data uri */
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAASCAYAAABB7B6eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1NjU2N0Q1RTNBMkZFMjExQTlCNjg5QjQzQTBGRDY1QSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo4MkIzMDBDNTJGODIxMUUyOTgzN0ExQ0FEREZERTE4MCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo4MkIzMDBDNDJGODIxMUUyOTgzN0ExQ0FEREZERTE4MCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjU3NTY3RDVFM0EyRkUyMTFBOUI2ODlCNDNBMEZENjVBIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU2NTY3RDVFM0EyRkUyMTFBOUI2ODlCNDNBMEZENjVBIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+S+feugAAAFtJREFUeNpi/P//PwMtAeOQt4AFjU8V2xgZGXmA1E8g/oPuA2pZoAykXgLxVxQLgBLcQEociHkotOMLLgtAQcaOJehIBX+wBhHQApqnotFIHo3k0UgeipEMEGAADaRXEC7WAy0AAAAASUVORK5CYII=);
@@ -94,7 +74,7 @@ to work with the chosen theme.
     padding: .75em 1em;
     display: block;
     position: relative;
-    color:#fff;
+    color:#000000;
     text-decoration: none;
 }
 
@@ -133,8 +113,6 @@ to work with the chosen theme.
     z-index:600;
     padding-left: 3em;
 }
-
-/* CSS Animations ============================================================= */
 .rm-accelerate {
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
@@ -149,8 +127,6 @@ to work with the chosen theme.
 .rm-css-animate.rm-menu-expanded {
     overflow: visible;
 }
-
-/* Theme styles ============================================================= */
 
 .rm-nav a {
     -webkit-transition: background-color 0.3s;
@@ -249,8 +225,6 @@ to work with the chosen theme.
     background-color: rgba(0, 0, 0, .3);
 }
 
-/* Expanded Layout styles - .rm-layout-expanded class is applied by plugin ========= */
-
 .rm-layout-expanded .rm-nav > ul,
 .rm-layout-expanded .rm-top-menu {
     margin-bottom: 0;
@@ -318,8 +292,6 @@ to work with the chosen theme.
 .rm-layout-expanded .rm-top-menu:after {
     clear: both;
 }
-
-/* No JS Styles ============================================================= */
 
 /* Hide Sub Menus */
 .no-js .rm-nav li ul,
